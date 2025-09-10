@@ -10,6 +10,15 @@ config_s2i
 
 ######## CUSTOMIZATION STARTS HERE ############
 
+echo "---> Installing application source"
+
+cp -Rf /tmp/src/*.html ./
+
+DATE=´date "+%b %d, %Y"´
+
+echo "Pagina construida desde YO EVER el $DATE" >> ./info.html
+
+
 ######## CUSTOMIZATION ENDS HERE ############
 
 if [ -d ./httpd-cfg ]; then
